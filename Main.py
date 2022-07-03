@@ -3,22 +3,16 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import svm
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 
 
 data = pd.read_csv('train.csv')
 dtc = DecisionTreeClassifier()
 svm = svm.SVC()
-nb = MultinomialNB()
-mlp = MLPClassifier(solver='lbfgs',alpha=1e-5, hidden_layer_sizes=(5,2), random_state=0)
 gbc = GradientBoostingClassifier(n_estimators=10)
 logr = LogisticRegression(random_state=0)
 rfc = RandomForestClassifier(random_state=1)
